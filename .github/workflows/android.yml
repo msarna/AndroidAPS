@@ -31,8 +31,14 @@ jobs:
       run: |
         ls -aR ${{ github.workspace }}
 
-    - name: Releasing using Hub
-      uses: sangatdesai/release-apk@main
-      env:
-       GITHUB_TOKEN: ${{ secrets.TOKEN }}
-       APP_FOLDER: app
+    - name: Upload APK Release - ${{ env.repository_name }}
+      uses: actions/upload-artifact@v3
+      with:
+        name: APK(s) release generated
+        path: app/build/outputs/apk/full/release
+
+    #- name: Releasing using Hub
+    #  uses: sangatdesai/release-apk@main
+    #  env:
+    #   GITHUB_TOKEN: ${{ secrets.TOKEN }}
+    #   APP_FOLDER: app
