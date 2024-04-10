@@ -25,7 +25,8 @@ jobs:
         ls -aR ${{ github.workspace }}
 
     - name: Build release apk
-      run: ./gradlew :app:assembleFullRelease
+      #run: ./gradlew :app:assembleFullRelease
+      run: ./gradlew :app:fullRelease
 
     - name: List files in the repository
       run: |
