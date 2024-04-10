@@ -22,14 +22,14 @@ jobs:
 
     - name: List files in the repository
       run: |
-        ls ${{ github.workspace }}
+        ls -at ${{ github.workspace }}
 
     - name: Build release apk
       run: ./gradlew :app:assembleFullRelease
 
     - name: List files in the repository
       run: |
-        ls ${{ github.workspace }}
+        ls -at ${{ github.workspace }}
 
     - name: Releasing using Hub
       uses: sangatdesai/release-apk@main
