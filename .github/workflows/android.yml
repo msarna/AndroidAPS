@@ -20,21 +20,31 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
-    - name: List files in the repository
-      run: |
-        ls -aR ${{ github.workspace }}
+    #- name: List files in the repository
+    #  run: |
+    #    ls -aR ${{ github.workspace }}
 
     - name: Build release apk
       run: ./gradlew app:assembleFullRelease
 
-    - name: List files in the repository
-      run: |
-        ls -aR ${{ github.workspace }}
+    #- name: List files in the repository
+    #  run: |
+    #    ls -aR ${{ github.workspace }}
+        
+    - name: Sign App
+      uses: r0adkll/sign-android-release@v1
+      id: sign_app
+      with:
+        releaseDirectory: app/build/outputs/apk/release
+        signingKeyBase64: ${{ secrets.SIGNING_KEY }}
+        alias: 'msarna'
+        keyStorePassword: '123456'
+        keyPassword: '123456
 
-    - name: Upload APK Release - ${{ env.repository_name }}
+    - name: Upload APK Release
       uses: actions/upload-artifact@v3
       with:
-        name: APK(s) release generated
+        name: APK release generated
         path: app/build/outputs/apk/full/release
 
     #- name: Releasing using Hub
