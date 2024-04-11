@@ -39,7 +39,7 @@ jobs:
         signingKeyBase64: ${{ secrets.SIGNING_KEY }}
         alias: 'msarna'
         keyStorePassword: '123456'
-        keyPassword: '123456
+        keyPassword: '123456'
 
     - name: Upload APK Release
       uses: actions/upload-artifact@v3
