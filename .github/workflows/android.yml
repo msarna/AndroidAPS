@@ -51,7 +51,7 @@ jobs:
         BUILD_TOOLS_VERSION: ${{ env.BUILD_TOOL_VERSION }}
 
     - name: Upload APK Release
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: APK release generated
         path: app/build/outputs/apk/full/release
