@@ -1,6 +1,8 @@
 Hi, this is a rough tutorial how to create AAPS WITHOUT ANDROID STUDIO
 
-#1 go to Settings->Secrets and variables->Actions->New repository secret
+#0 You need to fork the project from the official repository. To do this, go to this page https://github.com/nightscout/AndroidAPS and click the 'Fork' button on the right-hand side.
+
+#1 go to Settings (top bar on your project page)->Secrets and variables->Actions->New repository secret
 
 #2 Name secret 'SIGNING_KEY' and in text area paste your keystore (you can cat it, or open with notepad, copy and paste values)
 
