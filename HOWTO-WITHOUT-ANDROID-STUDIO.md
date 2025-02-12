@@ -1,5 +1,7 @@
 Hi, this is a rough tutorial how to create AAPS WITHOUT ANDROID STUDIO
 
+I see some issue with my tutorial, will create yt video to clarify things up
+
 #0 You need to fork the project from the official repository. To do this, go to this page https://github.com/nightscout/AndroidAPS and click the 'Fork' button on the right-hand side.
 
 #1 go to Settings (top bar on your project page)->Secrets and variables->Actions->New repository secret
