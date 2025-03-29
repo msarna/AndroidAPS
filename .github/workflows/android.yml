@@ -27,10 +27,6 @@ jobs:
     - name: Build release apk
       run: ./gradlew app:assembleFullRelease
 
-    #- name: List files in the repository
-    #  run: |
-    #    ls -aR ${{ github.workspace }}
-
     - name: Setup build tool version variable
       shell: bash
       run: |
