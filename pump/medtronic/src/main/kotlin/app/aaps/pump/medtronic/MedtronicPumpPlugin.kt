@@ -1395,6 +1395,7 @@ class MedtronicPumpPlugin @Inject constructor(
         }
     }
 
+
     override fun getRefreshTime(pumpDataRefreshType: PumpDataRefreshType): Int {
         return (
             when(pumpDataRefreshType) {
@@ -1409,5 +1410,4 @@ class MedtronicPumpPlugin @Inject constructor(
                 else                                 -> -1
             })
     }
-
 }
