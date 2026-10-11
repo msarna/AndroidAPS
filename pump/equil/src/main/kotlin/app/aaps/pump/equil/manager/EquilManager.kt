@@ -532,7 +532,6 @@ class EquilManager @Inject constructor(
         val firstChar = getSerialNumber().substringAfterLast(" - ").firstOrNull()?.uppercaseChar()
         return if (firstChar in OLD_PUMP_SERIAL_PREFIXES) 500 else 220
     }
-
     fun setBolusRecord(bolusRecord: EquilBolusRecord?) {
         equilState?.bolusRecord = bolusRecord
         storePodState()
